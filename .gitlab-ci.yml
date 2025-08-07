@@ -1,0 +1,29 @@
+image: node:lts
+
+stages:
+  - build
+#  - deploy
+
+# Uncomment the line below if your site is not at the root path
+#variables:
+#  BASE_URL: "/path/"
+
+cache:
+  paths:
+    - node_modules/
+    - .pnpm-store/
+
+# Build VitePress
+build:
+  stage: build
+  before_script:
+    - npm install -g pnpm
+  script:
+    - pnpm install --frozen-lockfile
+    - pnpm run build
+  artifacts:
+    paths:
+      - .vitepress/dist
+  rules:
+    - when: never # To enable on push to the 'main' branch, comment out this line.
+    - if: $CI_COMMIT_BRANCH == "main"

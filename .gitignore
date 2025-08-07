@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# pnpm store (cached by CI)
+.pnpm-store/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VitePress build output and cache
+**/.vitepress/dist/
+**/.vitepress/cache/
+
+# Vite / TypeScript build artifacts
+dist/
+*.tsbuildinfo
+
+# dotenv environment variable files
+.env
+.env.*
+!.env.example
+
+# Temporary scratch space for AI tools (see AGENTS.md)
+.tmp/
+
+# macOS
+.DS_Store
+
+# Editors / IDEs
+.idea/
+.vscode/
+.obsidian/
+
+# Vite timestamp logs
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*

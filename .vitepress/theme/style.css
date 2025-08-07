@@ -1,0 +1,57 @@
+/* Front */
+@font-face {
+  font-family: JetBrains Mono;
+  src: url("./fonts/JetBrainsMono.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+img {
+  border-radius: 5px;
+}
+
+code {
+  color: inherit !important;
+}
+
+:root {
+  --vp-font-family-mono:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
+}
+
+/**
+ * Component: VPSidebar
+ * -------------------------------------------------------------------------- */
+.VPSidebar {
+  scrollbar-width: thin;
+}
+
+/**
+ * Component: custom-block
+ * -------------------------------------------------------------------------- */
+.custom-block-title {
+  text-transform: lowercase;
+}
+.custom-block-title::first-letter {
+  text-transform: uppercase;
+}
+
+/**
+ * Component: medium-zoom
+ * -------------------------------------------------------------------------- */
+.medium-zoom-overlay {
+  z-index: 30;
+}
+
+.medium-zoom-image {
+  z-index: 9999 !important;
+}
+
+/**
+ * Component: bprogress
+ * -------------------------------------------------------------------------- */
+.bprogress {
+  --bprogress-color: var(--vp-c-brand-1);
+  --bprogress-box-shadow: none;
+}
